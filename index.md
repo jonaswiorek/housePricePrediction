@@ -1,0 +1,56 @@
+---
+title       : House Sale Prediction Application
+subtitle    : 
+author      : Jonas Wiorek
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Predict House Sale Price 
+
+If you are on the market to buy a house or sale your house, this application 
+offers a prediction of the value of the house. It is based on a statistical
+model. The model is using data from house sales including the sale price, living square feet, number of bedrooms, number of bathrooms and many other data on the house including location. 
+
+The first version of the model is a linear model based on living sqft, number of bedrooms and number of bathrooms. Later version will enhance the prediction model taking for instance the location into account.  
+
+---
+
+## House Sale Prediction 
+
+A simple linear regression model is used to predict the price of a house located 
+in the U.S. The variates used in the model are living square feetm number of bedrooms and number of bathrooms   
+
+$price = \beta_0 + \beta_1livingSqft + \beta_2NoOfBeds + \beta_3NoOfBaths$   
+
+The values of the model weights are:   
+$\beta_0 =$ 74847   
+$\beta_1 =$ 309   
+$\beta_2 =$ -57861   
+$\beta_3 =$ 7933   
+
+Note that $\beta_2$ is negative. Thus, giving the same number of living square 
+feet and number of bathrooms, the predicted house price is lower the more bedrooms.
+
+---
+
+## Square Meter to Square Feet Conversion
+
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
+
+---
+
+## Bath Definition
+
+- Full bathroom - Containing four plumbing fixtures: bathtub, shower, toilet, and sink
+- 3/4 bath - Containing toilet, sink, and shower
+- Half (1/2) bath - Containing a toilet and sink
+
+
+
+
